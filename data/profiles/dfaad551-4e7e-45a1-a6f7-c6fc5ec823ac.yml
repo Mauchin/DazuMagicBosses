@@ -1,6 +1,0 @@
-uuid: dfaad551-4e7e-45a1-a6f7-c6fc5ec823ac
-skin: http://textures.minecraft.net/texture/7ca38ccf417e99ca9d47eeb15a8a30edb1507aa52b678c220c717c474aa6fe3e
-profile: '{  "id" : "dfaad5514e7e45a1a6f7c6fc5ec823ac",  "name" : "MHF_Sheep",  "properties"
-  : [ {    "name" : "textures",    "value" : "ewogICJ0aW1lc3RhbXAiIDogMTY1MDg4NDQyMzY4MiwKICAicHJvZmlsZUlkIiA6ICJkZmFhZDU1MTRlN2U0NWExYTZmN2M2ZmM1ZWM4MjNhYyIsCiAgInByb2ZpbGVOYW1lIiA6ICJNSEZfU2hlZXAiLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2NhMzhjY2Y0MTdlOTljYTlkNDdlZWIxNWE4YTMwZWRiMTUwN2FhNTJiNjc4YzIyMGM3MTdjNDc0YWE2ZmUzZSIKICAgIH0KICB9Cn0="  }
-  ]}'
-name: MHF_Sheep
