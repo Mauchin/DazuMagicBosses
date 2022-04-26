@@ -1,0 +1,17 @@
+wands:
+  magma_helmet:
+    name: "§6Magma Helmet"
+  magma_chestplate:
+    name: "§6Magma Chestplate"
+  magma_leggings:
+    name: "§6Magma Leggings"
+  magma_boots:
+    name: "§6Magma Boots"
+  hardened_magma_helmet:
+    name: "§6§lHardened Magma Helmet"
+  hardened_magma_chestplate:
+    name: "§6§lHardened Magma Chestplate"
+  hardened_magma_leggings:
+    name: "§6§lHardened Magma Leggings"
+  hardened_magma_boots:
+    name: "§6§lHardened Magma Boots"

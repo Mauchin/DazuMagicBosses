@@ -1,0 +1,70 @@
+inferno_blaze:
+  type: blaze
+  name: Inferno Blaze
+  protection:
+    fire: 1
+    fall: 1
+  health: 600
+  docile: true
+  default_drops: false
+  persist: true
+  boss_bar:
+    bar_color: yellow
+    bar_flags:
+      - play_boss_music
+      - darken_sky
+  aggro: true
+  mage:
+    cost_reduction: 1
+    cooldown_reduction: 100
+  interval: 500
+  entity_attributes:
+    generic_attack_damage: 10
+    generic_armor: 6
+  track_radius: 64
+  targeting:
+    radius: 64
+  triggers:
+    launch1:
+      type: launch
+      cast:
+        homing: 50
+        none: 50
+    launch2:
+      type: launch
+      cast:
+        homing|2: 50
+        none: 50
+    launch3:
+      type: launch
+      cast:
+        homing|3: 50
+        none: 50
+    launch4:
+      type: launch
+      cast:
+        homing|4: 100
+    launchi:
+      type: launch
+      cast:
+        icbm: 30
+        none: 70
+    step1_interval:
+      type: interval
+      min_health_percentage: 50
+      cast:
+        icbm: 10
+        fireball|3: 10
+        fire|3: 10
+        none: 70
+    step2_interval:
+      type: interval
+      max_health_percentage: 50
+      cast:
+        blink: 100
+    step2_damage:
+      type: damage_dealt
+      max_health_percentage: 50
+      cast:
+        flamethrower|4: 60
+        push|4: 40

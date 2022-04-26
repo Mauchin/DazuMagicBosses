@@ -1,0 +1,11 @@
+wand_sets:
+  magma_armor:
+    required: 4
+    bonuses:
+      potion_effects:
+        fire_resistance: 0
+      mana_regeneration_boost: 0.3
+  hardened_magma_armor:
+    required: 4
+    bonuses:
+      earn_multiplier: 1.25

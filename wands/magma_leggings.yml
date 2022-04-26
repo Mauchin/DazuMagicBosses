@@ -1,0 +1,41 @@
+magma_leggings:
+  icon: leather_leggings:#FFC300
+  keep: false
+  worn: true
+  mana_max_boost: 0.1
+  passive: true
+  indestructible: false
+  enchantable: true
+  hide_flags: 64
+  sets: magma_armor
+  item_attribute_slot: legs
+  item_attributes:
+    generic_armor: 3
+    generic_armor_toughness: 1
+  enchantments:
+    protection_environmental: 2
+    protection_fire: 4
+    durability: 5
+    mending: 1
+
+hardened_magma_leggings:
+  icon: leather_leggings:#FF9300
+  keep: false
+  worn: true
+  mana_max_boost: 0.15
+  passive: true
+  indestructible: false
+  enchantable: true
+  hide_flags: 64
+  sets:
+    - magma_armor
+    - hardened_magma_armor
+  item_attribute_slot: legs
+  item_attributes:
+    generic_armor: 4
+    generic_armor_toughness: 1
+  enchantments:
+    protection_environmental: 5
+    protection_fire: 7
+    durability: 10
+    mending: 1

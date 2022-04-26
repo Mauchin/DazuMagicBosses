@@ -1,0 +1,25 @@
+magma_sword:
+  item:
+    ==: org.bukkit.inventory.ItemStack
+    type: GOLD_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: §6Magma Sword
+      enchants:
+        DAMAGE_ALL: 3
+        DAMAGE_UNDEAD: 5
+        FIRE_ASPECT: 8
+        UNBREAKING: 5
+        MENDING: 1
+    attributes:
+    - type: GENERIC_ATTACK_DAMAGE
+      amount: 6.0
+      name: Equipment Modifier
+      slot: HAND
+      operation: 0
+    - type: GENERIC_ATTACK_SPEED
+      amount: 1.8
+      name: Equipment Modifier
+      slot: HAND
+      operation: 0

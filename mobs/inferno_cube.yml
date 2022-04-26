@@ -1,0 +1,340 @@
+inferno_cube:
+  type: magma_cube
+  name: Inferno Cube
+  size: 10
+  interval: 1500
+  split: false
+  aggro: true
+  docile: true
+  cast_requires_target: false
+  health: 800
+  default_drops: false
+  persist: true #important
+  protection:
+    fire: 1
+    fall: 1
+  boss_bar:
+    bar_color: red
+    bar_flags:
+      - play_boss_music
+      - darken_sky
+  mage:
+    cost_reduction: 100
+    cooldown_reduction: 100
+  entity_attributes:
+    generic_attack_damage: 12
+    generic_knockback_resistance: 0.8
+    generic_armor: 0
+  targeting:
+    radius: 64
+  track_radius: 64
+  triggers:
+    damage:
+      cast:
+        push: 10
+        push|2: 10
+        push|3: 10
+        push|4: 10
+        "pull target last_damager": 40
+        none: 20
+
+    step1_interval:
+      type: interval
+      min_health_percentage: 75
+      cast:
+        "fireball|2 target last_damager": 50
+        "homing|2 target last_damager": 30
+        none: 20
+    step1_damage:
+      min_health_percentage: 75
+      type: damage
+      cast:
+        "blink|6 target last_damager": 20
+        none: 80
+    step2_interval:
+      type: interval
+      min_health_percentage: 50
+      max_health_percentage: 75
+      cast:
+        "flamethrower|2 target last_damager": 50
+        "homing|2 target last_damager": 30
+        none: 20
+    step2_damage:
+      min_health_percentage: 50
+      max_health_percentage: 75
+      type: damage
+      cast:
+        "blink|6 target last_damager": 30
+        none: 70
+    step3_interval:
+      type: interval
+      min_health_percentage: 25
+      max_health_percentage: 50
+      cast:
+        "lava|4 target last_damager": 50
+        "homing|3 target last_damager": 50
+    step3_damage:
+      min_health_percentage: 25
+      max_health_percentage: 50
+      type: damage
+      cast:
+        "blink|6 target last_damager": 40
+        none: 60
+    step4_step:
+      type: interval
+      max_health_percentage: 25
+      cast:
+        "homing|4 target last_damager": 30
+        "flamethrower|4 target last_damager": 25
+        "lava|4 target last_damager": 25
+        "icbm target last_damager": 20
+    step4_damage:
+      type: damage
+      max_health_percentage: 25
+      cast:
+        "blink|6 target last_damager": 50
+        none: 50
+    death:
+      commands:
+        - dazuboss defeat #important
+  drops:
+  - sp:50: 1
+    sp:75: 1
+    sp:100: 1
+    sp:125: 1
+    sp:150: 1
+  - magma_cream@32
+  - magma_chestplate: 3
+    magma_helmet: 3
+    magma_boots: 3
+    magma_leggings: 3
+    magma_sword: 3
+    none: 85
+
+super_inferno_cube:
+  type: magma_cube
+  name: Super Inferno Cube
+  size: 12
+  interval: 1000
+  split: false
+  aggro: true
+  docile: true
+  cast_requires_target: false
+  health: 1000
+  default_drops: false
+  persist: true #important
+  protection:
+    fire: 1
+    fall: 1
+  boss_bar:
+    bar_color: red
+    bar_flags:
+      - play_boss_music
+      - darken_sky
+  mage:
+    cost_reduction: 100
+    cooldown_reduction: 100
+  entity_attributes:
+    generic_attack_damage: 15
+    generic_knockback_resistance: 0.8
+    generic_armor: 0
+  targeting:
+    radius: 64
+  track_radius: 64
+  triggers:
+    damage:
+      cast:
+        push|4: 40
+        "pull target last_damager": 40
+        none: 20
+
+    step1_interval:
+      type: interval
+      min_health_percentage: 75
+      cast:
+        "fireball|4 target last_damager": 50
+        "homing|4 target last_damager": 30
+        none: 20
+    step1_damage:
+      min_health_percentage: 75
+      type: damage
+      cast:
+        "blink|6 target last_damager": 30
+        none: 70
+    step2_interval:
+      type: interval
+      min_health_percentage: 50
+      max_health_percentage: 75
+      cast:
+        "flamethrower|4 target last_damager": 50
+        "homing|4 target last_damager": 30
+        none: 20
+    step2_damage:
+      min_health_percentage: 50
+      max_health_percentage: 75
+      type: damage
+      cast:
+        "blink|6 target last_damager": 40
+        none: 60
+    step3_interval:
+      type: interval
+      min_health_percentage: 25
+      max_health_percentage: 50
+      cast:
+        "lava|4 target last_damager": 30
+        "homing|4 target last_damager": 30
+        "icbm target last_damager": 40
+    step3_damage:
+      min_health_percentage: 25
+      max_health_percentage: 50
+      type: damage
+      cast:
+        "blink|6 target last_damager": 50
+        none: 50
+    step4_step:
+      type: interval
+      max_health_percentage: 25
+      cast:
+        "homing|4 target last_damager": 30
+        "flamethrower|4 target last_damager": 20
+        "lava|4 target last_damager": 20
+        "icbm target last_damager": 30
+    step4_damage:
+      type: damage
+      max_health_percentage: 25
+      cast:
+        "blink|6 target last_damager": 60
+        none: 40
+    death:
+      commands:
+        - dazuboss defeat #important
+  drops:
+  - sp:100: 1
+    sp:125: 1
+    sp:150: 1
+    sp:175: 1
+    sp:200: 1
+  - magma_cream@32
+  - magma_chestplate: 60
+    magma_helmet: 60
+    magma_boots: 60
+    magma_leggings: 60
+    magma_sword: 60
+    hardened_magma_chestplate: 5
+    hardened_magma_leggings: 5
+    hardened_magma_boots: 5
+    hardened_magma_helmet: 5
+    none: 680
+
+master_inferno_cube:
+  type: magma_cube
+  name: Master Inferno Cube
+  size: 14
+  interval: 750
+  split: false
+  aggro: true
+  docile: true
+  cast_requires_target: false
+  health: 1500
+  default_drops: false
+  persist: true #important
+  protection:
+    fire: 1
+    fall: 1
+  boss_bar:
+    bar_color: red
+    bar_flags:
+      - play_boss_music
+      - darken_sky
+  mage:
+    cost_reduction: 100
+    cooldown_reduction: 100
+  entity_attributes:
+    generic_attack_damage: 20
+    generic_knockback_resistance: 0.8
+    generic_armor: 0
+  targeting:
+    radius: 64
+  track_radius: 64
+  triggers:
+    damage:
+      cast:
+        push|4: 50
+        "pull target last_damager": 50
+
+    step1_interval:
+      type: interval
+      min_health_percentage: 75
+      cast:
+        "fireball|4 target last_damager": 30
+        "homing|4 target last_damager": 30
+        "icbm target last_damager": 30
+        none: 10
+    step1_damage:
+      min_health_percentage: 75
+      type: damage
+      cast:
+        "blink|6 target last_damager": 40
+        none: 60
+    step2_interval:
+      type: interval
+      min_health_percentage: 50
+      max_health_percentage: 75
+      cast:
+        "flamethrower|4 target last_damager": 30
+        "homing|4 target last_damager": 30
+        "icbm target last_damager": 30
+        none: 10
+    step2_damage:
+      min_health_percentage: 50
+      max_health_percentage: 75
+      type: damage
+      cast:
+        "blink|6 target last_damager": 60
+        none: 40
+    step3_interval:
+      type: interval
+      min_health_percentage: 25
+      max_health_percentage: 50
+      cast:
+        "lava|4 target last_damager": 30
+        "homing|4 target last_damager": 40
+        "icbm target last_damager": 30
+    step3_damage:
+      min_health_percentage: 25
+      max_health_percentage: 50
+      type: damage
+      cast:
+        "blink|6 target last_damager": 80
+        none: 20
+    step4_step:
+      type: interval
+      max_health_percentage: 25
+      cast:
+        "homing|4 target last_damager": 50
+        "icbm target last_damager": 50
+    step4_damage:
+      type: damage
+      max_health_percentage: 25
+      cast:
+        "blink|6 target last_damager": 100
+    death:
+      commands:
+        - dazuboss defeat #important
+  drops:
+  - sp:150: 1
+    sp:175: 1
+    sp:200: 1
+    sp:225: 1
+    sp:250: 1
+  - magma_cream@32
+  - magma_chestplate: 9
+    magma_helmet: 9
+    magma_boots: 9
+    magma_leggings: 9
+    magma_sword: 9
+    hardened_magma_chestplate: 1
+    hardened_magma_leggings: 1
+    hardened_magma_boots: 1
+    hardened_magma_helmet: 1
+    none: 51
